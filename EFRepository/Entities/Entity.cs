@@ -23,11 +23,13 @@ namespace EFRepository.Entities
         public DateTime? Updated { get; set; }
         public Guid CreatedBy { get; set; }
         public Guid? UpdatedBy { get; set; }
+        [Timestamp()]
+        public byte[] RowVersion { get; set; }
 
         #endregion Public Properties
 
         #region Members Public
-        
+
         public override bool Equals(object obj) => this.Id.Equals(((Entity)obj).Id);
 
         public override int GetHashCode() => base.GetHashCode();
