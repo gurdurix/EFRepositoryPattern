@@ -33,7 +33,7 @@ namespace EFRepository
 
         public TEntity Insert(TEntity entity)
         {
-            entity.Id = Guid.NewGuid();
+            if (entity.Id.Equals(Guid.Empty)) entity.Id = Guid.NewGuid();
             entity.Created = DateTime.Now;
             entity.CreatedBy = _userLoggedId;
             entity.Active = true;
