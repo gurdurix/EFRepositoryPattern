@@ -9,7 +9,6 @@ namespace EFRepository.Entities
         #region Ctor
         
         public UserProfile() { }
-        public UserProfile(Guid id) : base(id) { }
         public UserProfile(string name, string description)
         {
             Name = name;

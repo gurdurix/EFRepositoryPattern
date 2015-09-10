@@ -8,13 +8,6 @@ namespace EFRepository.Entities
 {
     public abstract class Entity
     {
-        #region Ctor
-
-        public Entity() { }
-        public Entity(Guid id) { Id = id; }
-
-        #endregion Ctor
-
         #region Properties
 
         public Guid Id { get; set; }
